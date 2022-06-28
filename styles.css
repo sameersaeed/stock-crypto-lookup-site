@@ -1,0 +1,130 @@
+/* 
+** Sameer Saeed
+** Stock/Crypto Lookup Website
+** Stylesheet for website
+*/
+
+body { 
+    background: linear-gradient(45deg, hsla(180, 30%, 54%, 1) 0%, hsla(0, 20%, 51%, 1) 100%);
+    background-size: 100% 350%;
+    animation: gradient 25s ease-in infinite;
+    height: 175vh;
+}
+
+h1 { 
+    text-align: center;
+    font-size: 3.25em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 850;
+}
+
+.header { 
+    background-color: turquoise;
+    opacity: 20%;
+    margin: -35px -10px -10px;
+}
+
+p { 
+    text-align: center;
+    font-size: 1.25em;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    word-wrap: break-word;
+}
+
+.border-corners { 
+    margin: auto;
+    width: 50vh;
+    padding: 10px;
+    background: 
+        linear-gradient(to right, #000 5px, transparent 5px) 0 0,
+        linear-gradient(to right, #000 5px, transparent 5px) 0 100%,
+        linear-gradient(to left, #000 5px, transparent 5px) 100% 0,
+        linear-gradient(to left, #000 5px, transparent 5px) 100% 100%,
+        linear-gradient(to bottom, #000 5px, transparent 5px) 0 0,
+        linear-gradient(to bottom, #000 5px, transparent 5px) 100% 0,
+        linear-gradient(to top, #000 5px, transparent 5px) 0 100%,
+        linear-gradient(to top, #000 5px, transparent 5px) 100% 100%;
+    background-repeat: no-repeat;
+    background-size: 35px 35px;
+}
+
+.border-squares { 
+    padding: 10px;
+    background: 
+        linear-gradient(to right, #000 7px, #000) 0 0,
+        linear-gradient(to right, #000 7px, #000) 0 100%,
+        linear-gradient(to left, #000 7px, #000) 100% 0,
+        linear-gradient(to left, #000 7px, #000) 100% 100%,
+        linear-gradient(to bottom, #000 7px, #000) 0 0,
+        linear-gradient(to bottom, #000 7px, #000) 100% 0,
+        linear-gradient(to top, #000 7px, #000) 0 100%,
+        linear-gradient(to top, #000 7px, #000) 100% 100%;
+    background-repeat: no-repeat;
+    background-size: 25px 25px;
+}
+
+.form-box { 
+    width: 94%;
+    background-color: white;
+    opacity: 50%;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+    text-align: center;
+    padding: 6% 3% 6% 3%;
+}
+
+#label2 { 
+    padding-top: 3%;
+}
+
+label, input { 
+    display: inline-block;
+    width: 20vw;
+    font-size: 1em;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: 900;
+}
+
+select { 
+    padding: 0.5%;
+    width: 20.5vw;
+    font-size: 1em;
+    text-align: center;
+}
+
+input[type=submit] { 
+    width: 20%;
+    border: 2px solid ;
+    cursor: pointer;
+    float: center;
+    margin-top: 3%;
+    background-color: white;
+}
+
+input[type=submit]:hover { 
+    border: 2px solid lightgray;
+    background-color: black;
+    color: lightgray;
+}
+
+#chart { 
+    padding: 6% 3% 6% 3%;
+    width: 100vh;
+    height: 100vh;
+    margin: auto auto;
+}
+
+@keyframes gradient { 
+    0% { 
+        background-position: 67% 0%
+    }
+    50% { 
+        background-position: 34% 100%
+    }
+    100% { 
+        background-position: 67% 0%
+    }
+}
