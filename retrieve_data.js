@@ -4,8 +4,8 @@
 ** Uses Alpha Vantage's Stock APIs to retrieve info for a stock/crypto given by the user
 */
 
-const s_URL = "https: //www.alphavantage.co/query?apikey= YOUR_API_KEY&function= TIME_SERIES_MONTHLY_ADJUSTED&datatype= json&symbol= ";
-const c_URL = "https: //www.alphavantage.co/query?&apikey= YOUR_API_KEY&function= DIGITAL_CURRENCY_MONTHLY&market= USD&datatype= json&symbol= "
+const s_URL = "https://www.alphavantage.co/query?apikey=YOUR_API_KEY&function=TIME_SERIES_MONTHLY_ADJUSTED&datatype=json&symbol=";
+const c_URL = "https://www.alphavantage.co/query?&apikey=YOUR_API_KEY&function=DIGITAL_CURRENCY_MONTHLY&market=USD&datatype=json&symbol=";
 const form = document.querySelector("#search");
 const chart = document.querySelector("#chart");
 var selected = document.getElementById("options"), val;
@@ -86,7 +86,7 @@ function format(data) { //filters data from API to get what will be inserted int
     let out = []; //contains data for x and y axes
     if(val === "cr") { //formatting for crypto option
         //title for chart
-        options.title.text = "Monthly Time Series for: "+ data["Meta Data"]["2. Digital Currency Code"] + 
+        options.title.text = "Monthly Time Series for: " + data["Meta Data"]["2. Digital Currency Code"] + 
        "("+ data["Meta Data"]["3. Digital Currency Name"] +")";
        //gets each time entry for the graph
         Object.entries(data["Time Series (Digital Currency Monthly)"]).forEach(
@@ -108,7 +108,7 @@ function format(data) { //filters data from API to get what will be inserted int
         options.series[0].data = out.sort((x, y) => x.a - y.b); //sorts axes in ascending order
     }
     else { //formatting for stock (default) option
-        options.title.text = "Monthly Time Series for: "+ data["Meta Data"]["2. Symbol"];
+        options.title.text = "Monthly Time Series for: " + data["Meta Data"]["2. Symbol"];
         Object.entries(data["Monthly Adjusted Time Series"]).forEach(
         ([month, monthlyPrices]) => {
             let obj = {};
