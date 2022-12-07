@@ -8,6 +8,7 @@ body {
     background: linear-gradient(45deg, hsla(180, 30%, 54%, 1) 0%, hsla(0, 20%, 51%, 1) 100%);
     background-size: 100% 350%;
     animation: gradient 25s ease-in infinite;
+    overflow-x: hidden;
     height: 175vh;
 }
 
